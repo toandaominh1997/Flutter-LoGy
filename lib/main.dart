@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:logy_app/componets/horizontal_listview.dart';
 import 'package:logy_app/componets/products.dart';
+import 'package:logy_app/pages/cart.dart';
 void main(){
   runApp(
     MaterialApp(
@@ -44,7 +45,9 @@ class HomePageState extends State<HomePage>{
         title: Text("Logy"),
         actions:<Widget>[
           new IconButton(icon: Icon(Icons.search, color: Colors.white,), onPressed: null),
-          new IconButton(icon: Icon(Icons.shopping_cart, color: Colors.white,), onPressed: null)
+          new IconButton(icon: Icon(Icons.shopping_cart, color: Colors.white,),
+              onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> new Cart()));
+          })
         ]
       ),
       
@@ -83,9 +86,12 @@ class HomePageState extends State<HomePage>{
                 )
             ),
             InkWell(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> new Cart()));
+              },
                 child: ListTile(
-                  title: Text("Categories"),
-                  leading: Icon(Icons.dashboard),
+                  title: Text("Shopping cart"),
+                  leading: Icon(Icons.shopping_cart),
                 )
             ),
             InkWell(

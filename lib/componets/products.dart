@@ -9,7 +9,7 @@ class Products extends StatefulWidget {
 class _ProductsState extends State<Products> {
   var product_list = [
     {
-      "name": "Blazer",
+      "name": "Red Blazer",
       "picture": "images/products/blazer1.jpeg",
       "old_price": 120,
       "price": 85,
@@ -19,6 +19,36 @@ class _ProductsState extends State<Products> {
       "picture": "images/products/dress1.jpeg",
       "old_price": 100,
       "price": 50,
+    },
+    {
+      "name": "Blue Blazer",
+      "picture": "images/products/blazer2.jpeg",
+      "old_price": 120,
+      "price": 85,
+    },
+    {
+      "name": "Red hill",
+      "picture": "images/products/hills1.jpeg",
+      "old_price": 100,
+      "price": 50,
+    },
+    {
+      "name": "Blue hill",
+      "picture": "images/products/hills2.jpeg",
+      "old_price": 120,
+      "price": 85,
+    },
+    {
+      "name": "Red skt",
+      "picture": "images/products/skt1.jpeg",
+      "old_price": 100,
+      "price": 50,
+    },
+    {
+      "name": "Blue skt",
+      "picture": "images/products/skt2.jpeg",
+      "old_price": 120,
+      "price": 85,
     }
   ];
 
