@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:logy_app/componets/cart_products.dart';
 class Cart extends StatefulWidget{
   @override
   CartState createState() => CartState();
@@ -18,6 +18,8 @@ class CartState extends State<Cart>{
           new IconButton(icon: Icon(Icons.search, color: Colors.white,), onPressed: null)
         ],
       ),
+      body: new CartProducts(),
+
       bottomNavigationBar: new Container(
         color: Colors.white,
         child: Row(
