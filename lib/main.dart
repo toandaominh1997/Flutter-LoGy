@@ -112,13 +112,16 @@ class HomePageState extends State<HomePage>{
       ),
       body: new ListView(
         children: <Widget>[
+          //image carousel begins here
           image_carousel,
+
           //padding widget
           new Padding(padding: const EdgeInsets.all(8.0),
             child: new Text('Categories'),),
 
           //Horizontal list view begins here
           HorizontalList(),
+
           //padding widget
           new Padding(padding: const EdgeInsets.all(20.0),
             child: new Text('Recent products'),),
@@ -129,9 +132,7 @@ class HomePageState extends State<HomePage>{
             child: Products(),
           )
         ],
-      )
+      ),
     );
-    return null;
   }
-
 }
