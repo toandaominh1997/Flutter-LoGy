@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:logy_app/pages/cart.dart';
 class ProductDetails extends StatefulWidget{
   final product_detail_name;
   final product_detail_new_price;
@@ -111,7 +111,9 @@ class ProductDetailsState extends State<ProductDetails>{
           Row(
             children: <Widget>[
               Expanded(
-                child: MaterialButton(onPressed: (){},
+                child: MaterialButton(onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> Cart()));
+                },
                 color: Colors.red,
                 textColor: Colors.white,
                 elevation: 0.2,
