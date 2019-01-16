@@ -3,6 +3,8 @@ import 'package:carousel_pro/carousel_pro.dart';
 import 'package:logy_app/componets/horizontal_listview.dart';
 import 'package:logy_app/componets/products.dart';
 import 'package:logy_app/pages/cart.dart';
+import 'package:logy_app/pages/aboutus.dart';
+
 void main(){
   runApp(
     MaterialApp(
@@ -109,6 +111,9 @@ class HomePageState extends State<HomePage>{
                 )
             ),
             InkWell(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> new AboutUs()));
+              },
                 child: ListTile(
                   title: Text("About"),
                   leading: Icon(Icons.help, color: Colors.green,),
