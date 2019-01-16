@@ -18,11 +18,12 @@ class HomePage extends StatefulWidget{
 }
 
 class HomePageState extends State<HomePage>{
+  int _selectedPage=0;
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     Widget image_carousel = new Container(
-      height: 100.0,
+      height: 200.0,
       child:  new Carousel(
         boxFit: BoxFit.cover,
         images: [
@@ -137,6 +138,41 @@ class HomePageState extends State<HomePage>{
             height: 320.0,
             child: Products(),
           )
+        ],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _selectedPage,
+        onTap: (int index){
+          if(index==0){
+            //envent at Here
+          }
+          else if(index==1){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=> new Cart()));
+          }
+          else if(index==2){
+
+          }
+          else if(index==3){
+
+          }
+        },
+        items: [
+          BottomNavigationBarItem(
+              icon: Icon(Icons.home, color: Colors.black,),
+              title: Text('Home'),
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.search, color: Colors.black,),
+              title: Text('Search'),
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.favorite, color: Colors.black,),
+              title: Text('Favorite')
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.person, color: Colors.black,),
+              title: Text('Profile')
+          ),
         ],
       ),
     );
