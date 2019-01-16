@@ -147,12 +147,14 @@ class HomePageState extends State<HomePage>{
 
           //grid view
           Container(
-            height: 320.0,
+            height: 300.0,
             child: Products(),
           )
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
+        iconSize: 24.0,
+
         currentIndex: _selectedPage,
         onTap: (int index){
           if(index==0){
