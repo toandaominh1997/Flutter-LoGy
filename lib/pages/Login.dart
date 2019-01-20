@@ -161,7 +161,7 @@ class LoginState extends State<Login> {
               ],
             ),
           ),
-          
+
           new Container(
             width: MediaQuery.of(context).size.width,
             margin: const EdgeInsets.only(left: 30.0, right: 30.0, top: 20.0),
