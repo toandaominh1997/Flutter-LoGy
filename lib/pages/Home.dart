@@ -7,6 +7,8 @@ import 'package:logy_app/pages/aboutus.dart';
 import 'package:logy_app/pages/favorite.dart';
 import 'package:logy_app/pages/profile.dart';
 import 'package:logy_app/pages/setting.dart';
+import 'package:logy_app/pages/LoginHomePage.dart';
+
 
 class HomePage extends StatefulWidget{
   @override
@@ -124,6 +126,15 @@ class HomePageState extends State<HomePage>{
                   child: ListTile(
                     title: Text("About"),
                     leading: Icon(Icons.help, color: Colors.green,),
+                  )
+              ),
+              InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> new LoginHomePage()));
+                  },
+                  child: ListTile(
+                    title: Text("Login/Logout"),
+                    leading: Icon(Icons.person, color: Colors.green,),
                   )
               ),
             ],
